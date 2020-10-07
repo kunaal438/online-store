@@ -1,3 +1,15 @@
 body{
     font-family: 'Open Sans Condensed', sans-serif;
+    padding: 10px 5vw;
+}
+
+::selection{
+    color: #fff;
+    background: #000;
+}
+
+a{
+    color: #2f2f2f;
+    font-weight: 700;
+    text-decoration: none;
 }
