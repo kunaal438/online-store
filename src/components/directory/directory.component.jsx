@@ -11,30 +11,35 @@ class Directory extends React.Component {
             section: [
                 {
                     title: "hats",
-                    img_url: 'https://i.ibb.co/cvpntL1/hats.png',
+                    imgUrl: 'https://i.ibb.co/cvpntL1/hats.png',
                     id: 1,
+                    linkUrl: 'hats',
                 },
                 {
                     title: "jackets",
-                    img_url: 'https://i.ibb.co/px2tCc3/jackets.png',
+                    imgUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
                     id: 2,
+                    linkUrl: '',
                 },
                 {
                     title: "sneakers",
-                    img_url: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                    imgUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
                     id: 3,
+                    linkUrl: '',
                 },
                 {
                     title: "womens",
-                    img_url: 'https://i.ibb.co/GCCdy8t/womens.png',
+                    imgUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
                     id: 4,
-                    size: 'large'
+                    linkUrl: '',
+                    size: 'large',
                 },
                 {
                     title: "mens",
-                    img_url: 'https://i.ibb.co/R70vBrQ/men.png',
+                    imgUrl: 'https://i.ibb.co/R70vBrQ/men.png',
                     id: 5,
-                    size: 'large'
+                    linkUrl: '',
+                    size: 'large',
                 },
             ]
         };
@@ -44,8 +49,8 @@ class Directory extends React.Component {
         return (
             <div className="directory-menu">
                 {
-                    this.state.section.map(({ title, id, img_url, size }) => {
-                        return <MenuItem key={id} imgUrl={img_url} title={title} size={size}/>
+                    this.state.section.map(({ id, ...allsectionsInput }) => {
+                        return <MenuItem key={id} {...allsectionsInput} />
                     })
                 }
             </div>
