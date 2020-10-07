@@ -1,49 +1,74 @@
-
 .menu-item {
-    min-width: 30%;
-    height: 240px;
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000;
-    border: 1px solid black;
-    margin: 0 7.5px 15px;
-    background-size: cover;
-    background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 30%;
+  height: 240px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 7.5px 15px;
+  background-size: cover;
+  background-position: center;
 
-    &.large{
-        height: 320px;
+  &.large {
+    height: 380px;
+  }
+
+  &:first-child {
+    margin-right: 7.5px;
+  }
+
+  &:last-child {
+    margin-left: 7.5px;
+  }
+
+  &:hover {
+    & .background-container {
+      transform: translate(-50%, -50%) scale(1.1);
+      filter: blur(1px);
     }
-  
-    &:first-child {
-      margin-right: 7.5px;
-    }
-  
-    &:last-child {
-      margin-left: 7.5px;
-    }
-  
-    .content {
-      height: 90px;
-      padding: 0 25px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.7);
-      text-transform: uppercase;
-  
-      .title {
-        font-weight: bold;
-        margin-bottom: 6px;
-        font-size: 22px;
-        color: #4a4a4a;
-      }
-  
-      .subtitle {
-        font-weight: lighter;
-        font-size: 16px;
-      }
+
+    & .content {
+      background-color: rgba(255, 255, 255, 0.9);
     }
   }
+
+  .background-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 6s;
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .content {
+    z-index: 2;
+    height: 90px;
+    transition: 0.5s;
+    padding: 0 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 22px;
+      color: #4a4a4a;
+    }
+
+    .subtitle {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
