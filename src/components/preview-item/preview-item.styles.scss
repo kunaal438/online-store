@@ -1,0 +1,28 @@
+.preview-container{
+    padding: 10px 5vw;
+
+    h2{
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    .previews{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 996px){
+    .previews{
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-column-gap: 30px !important;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .previews{
+        grid-template-columns: repeat(1, 1fr) !important;
+        // grid-column-gap: 30px !important;
+    }
+}
