@@ -1,0 +1,18 @@
+.custom-button{
+    padding: 10px 30px;
+    border: 1px solid #000;
+    background: #000;
+    transition: .5s;
+    cursor: pointer;
+    color: #fff;
+    min-width: 180px;
+
+    &:hover{
+        background: #fff;
+        color: #000;
+    }
+
+    &:focus{
+        outline: none;
+    }
+}

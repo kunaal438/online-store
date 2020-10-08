@@ -7,17 +7,38 @@ import ShopPage from './pages/shopPage/shopPage.component';
 import Navbar from './components/navbar/navbar.component';
 import SignInPage from './pages/signInUpPage/signPage.component';
 
-function App() {
-  return (
-    <div>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/shop" component={ShopPage} />
-        <Route path="/signin" component={SignInPage} />
-      </Switch>
-    </div>
-  );
+import { auth } from './firebase/firebase.utils';
+
+class App extends React.Component {
+
+  constructor() {
+    super()
+
+    this.state = {
+      currentUser: null
+    }
+  }
+
+  componentDidMount(){
+    auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user });
+
+      console.log(user);
+    })
+  }
+
+  render(){
+    return (
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/shop" component={ShopPage} />
+          <Route path="/signin" component={SignInPage} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
