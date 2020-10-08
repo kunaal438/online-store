@@ -1,0 +1,35 @@
+.form-group{
+    position: relative;
+
+    input{
+        width: 90%;
+        border: none;
+        border-bottom: 1px solid grey;
+        height: 20px;
+        font-size: 15px;
+        margin-bottom: 20px;
+        padding: 5px;
+
+        &:focus{
+            outline: none;
+        }
+
+        &:focus ~ label{
+            top: -14px;
+            font-size: 14px;
+        }
+    }
+
+    label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .2s;
+        text-transform: capitalize;
+
+        &.shrink{
+            top: -14px;
+            font-size: 14px;
+        }
+    }
+}

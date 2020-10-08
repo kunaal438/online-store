@@ -19,6 +19,9 @@ const Navbar = () => (
                 <li>
                     <a href="http://kunaal.herokuapp.com/contact" target="_blank">contact</a>
                 </li>
+                <li>
+                    <Link to="/signin" >Sign In</Link>
+                </li>
             </ul>
         </div>
     </nav>
