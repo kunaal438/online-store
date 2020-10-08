@@ -13,3 +13,7 @@ a{
     font-weight: 700;
     text-decoration: none;
 }
+
+*{
+    box-sizing: border-box;
+}

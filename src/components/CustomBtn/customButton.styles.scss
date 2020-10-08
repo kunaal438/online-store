@@ -1,5 +1,5 @@
 .custom-button{
-    padding: 10px 30px;
+    padding: 15px 30px;
     border: 1px solid #000;
     background: #000;
     transition: .5s;
@@ -8,11 +8,21 @@
     min-width: 180px;
 
     &:hover{
-        background: #fff;
+        background: transparent;
         color: #000;
     }
 
     &:focus{
         outline: none;
+    }
+
+    &.sign-in-google{
+        background: #4285F4;
+        border: 1px solid #4285F4;
+    }
+
+    &.sign-in-google:hover{
+        background: #1554b9;
+        color: #fff;
     }
 }

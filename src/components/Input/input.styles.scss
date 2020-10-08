@@ -2,13 +2,13 @@
     position: relative;
 
     input{
-        width: 90%;
+        width: 100%;
         border: none;
         border-bottom: 1px solid grey;
-        height: 20px;
+        height: 30px;
         font-size: 15px;
-        margin-bottom: 40px;
-        padding: 5px;
+        margin-bottom: 50px;
+        padding: 10px 0px !important;
 
         &:focus{
             outline: none;
